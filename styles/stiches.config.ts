@@ -13,7 +13,6 @@ const stitches = createStitches({
       buttonBaseBackgroundPrimary : "$gray600",
       buttonHighlightBackgroundPrimary  : "$gray900",
       buttonBaseTextPrimary : "$white",
-
       buttonBaseBackgroundSecondary : "$graycool100",
       buttonHighlightBackgroundSecondary  : "$gray500",
       buttonBaseTextSecondary : "$gray900",
@@ -23,6 +22,7 @@ const stitches = createStitches({
       textMuted: "$gray500",
       backgroundBase : "$gray25",
       backgroundContainer : "$white",
+      borderBase : "$graycool100",
     },
     space: {
       4: "0.25rem",
@@ -37,6 +37,8 @@ const stitches = createStitches({
       56: "3.5rem",
       64: "4rem",
       72: "5rem",
+      112: "7rem",
+      "pageMarginX": 'calc((1/12) * 100vw)'
     },
     fontSizes: {
       "step--2": "clamp(0.69rem, calc(0.64rem + 0.25vw), 0.87rem)",
