@@ -3,27 +3,28 @@ import { within, userEvent } from "@storybook/testing-library";
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Button } from "./Button";
+import { Button as Component } from "./Button";
 
 export default {
   title: "UI/Button",
-  component: Button,
+  component: Component,
   argTypes: {
     backgroundColor: { control: "color" },
     onClick: { action: true },
+    variant: { control: { type: "select", options: ["primary", "secondary"] } },
   },
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Component>;
 
-const Template: ComponentStory<typeof Button> = (args) => (
-  <Button {...args}>Click me</Button>
+const Template: ComponentStory<typeof Component> = (args) => (
+  <Component {...args}>Click me</Component>
 );
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Button = Template.bind({});
+Button.args = {
   variant: "primary",
 };
 
-Primary.play = async ({ args, canvasElement }) => {
+Button.play = async ({ args, canvasElement }) => {
   // Starts querying the component from its root element
   const canvas = within(canvasElement);
   const button = canvas.getByRole("button");

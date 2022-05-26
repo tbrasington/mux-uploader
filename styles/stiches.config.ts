@@ -13,6 +13,11 @@ const stitches = createStitches({
       buttonBaseBackgroundPrimary : "$gray600",
       buttonHighlightBackgroundPrimary  : "$gray900",
       buttonBaseTextPrimary : "$white",
+
+      buttonBaseBackgroundSecondary : "$graycool100",
+      buttonHighlightBackgroundSecondary  : "$gray500",
+      buttonBaseTextSecondary : "$gray900",
+      buttonHighlightTextSecondary : "$graycool100",
       text : "$graycool900",
       textHighlight: "$graycool600",
       textMuted: "$gray500",

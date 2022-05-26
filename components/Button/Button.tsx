@@ -1,4 +1,3 @@
-import React from "react";
 import { styled, css } from "../../styles/stiches.config";
 import { textStyle } from "../../styles/text";
 
@@ -22,6 +21,14 @@ export const ButtonStyle = css({
         backgroundColor: "$buttonBaseBackgroundPrimary",
         "&:hover": {
           backgroundColor: "$buttonHighlightBackgroundPrimary",
+        },
+      },
+      secondary: {
+        color: "$buttonBaseTextSecondary",
+        backgroundColor: "$buttonBaseBackgroundSecondary",
+        "&:hover": {
+          backgroundColor: "$buttonHighlightBackgroundSecondary",
+          color: "$buttonHighlightTextSecondary",
         },
       },
     },
