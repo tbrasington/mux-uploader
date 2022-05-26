@@ -1,25 +1,31 @@
 export const textStyle = {
   heading: {
     fontSize: "$step-1",
-    fontWeight: "$interBold",
+    fontWeight: "$interSemiBold",
     lineHeight: "$interHeading",
     fontFamily: "$inter",
   },
   deck: {
     fontSize: "$step-1",
-    fontWeight: "$interMedium",
+    fontWeight: "$interRegular",
     lineHeight: "$interHeading",
     fontFamily: "$inter",
   },
   label: {
-    fontSize: "$step--2",
-    fontWeight: "$interSemiBold",
+    fontSize: "$step--1",
+    fontWeight: "$interRegular",
+    lineHeight: "$interHeading",
+    fontFamily: "$inter",
+  },
+  labelEmphasis: {
+    fontSize: "$step--1",
+    fontWeight: "$interMedium",
     lineHeight: "$interHeading",
     fontFamily: "$inter",
   },
   labeDescription: {
-    fontSize: "$step--2",
-    fontWeight: "$interMedium",
+    fontSize: "$step--1",
+    fontWeight: "$interRegular",
     lineHeight: "$interBody",
     fontFamily: "$inter",
   },

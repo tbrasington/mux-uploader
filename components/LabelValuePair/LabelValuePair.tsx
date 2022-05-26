@@ -1,6 +1,5 @@
 import { styled } from "../../styles/stiches.config";
-import { textStyle } from "../../styles/text";
-
+import { Text } from "../Text";
 interface LabelValueProps {
   label?: string;
   value?: string;
@@ -14,10 +13,10 @@ export function LabelValuePair({
 }: LabelValueProps) {
   return (
     <Container>
-      <Text variant="label" align={align}>
+      <Text variant="labelDescription" align={align} color="muted">
         {label}
       </Text>
-      <Text variant="value" align={align}>
+      <Text variant="labelDescription" align={align} color="base">
         {value}
       </Text>
     </Container>
@@ -27,28 +26,4 @@ export function LabelValuePair({
 const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
-});
-
-const Text = styled("span", {
-  flex: 1,
-  ...textStyle.labeDescription,
-  variants: {
-    variant: {
-      label: {
-        color: "$text",
-      },
-      value: {
-        color: "$textHighlight",
-      },
-    },
-    align: {
-      left: {
-        textAlign: "left",
-      },
-      right: {
-        textAlign: "right",
-      },
-    },
-  },
-  defaultVariants: { align: "left", variant: "value" },
 });

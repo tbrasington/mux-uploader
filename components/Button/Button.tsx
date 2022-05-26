@@ -8,8 +8,8 @@ export const ButtonStyle = css({
   border: "none",
   padding: "$12 $16",
   alignSelf: "flex-start",
-  borderRadius: "$mid",
-  ...textStyle.label,
+  borderRadius: "$small",
+  ...textStyle.labelEmphasis,
   textDecoration: "none",
   lineHeight: 1,
   variants: {
