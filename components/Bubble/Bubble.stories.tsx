@@ -4,6 +4,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Bubble as Component } from "./Bubble";
+import { Button } from "../Button";
 
 export default {
   title: "UI/Bubble",
@@ -14,7 +15,9 @@ export default {
 } as ComponentMeta<typeof Component>;
 
 const Template: ComponentStory<typeof Component> = (args) => (
-  <Component {...args}></Component>
+  <Component {...args}>
+    <Button>Sign in</Button>
+  </Component>
 );
 
 export const Bubble = Template.bind({});

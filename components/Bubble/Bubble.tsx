@@ -17,7 +17,7 @@ export function Bubble({ label, value, children }: BubbleProps) {
           {value}
         </Text>
       </TextContainer>
-      {children}
+      <ChildContainer>{children}</ChildContainer>
     </Container>
   );
 }
@@ -29,14 +29,23 @@ const Container = styled("div", {
   borderRadius: "$small",
   boxShadow: "$mid",
   overflow: "hidden",
+  padding: "$32",
 });
 
 const TextContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
-  padding: "$32",
+
   width: "100%",
   gap: "$4",
   maxWidth: "72ch",
+});
+
+const ChildContainer = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  padding: "$24 0 0 0",
+  width: "100%",
+  gap: "$4",
 });
