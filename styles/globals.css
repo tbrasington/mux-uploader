@@ -23,6 +23,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {

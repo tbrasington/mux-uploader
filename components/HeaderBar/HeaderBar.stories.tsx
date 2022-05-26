@@ -1,5 +1,5 @@
 import { expect } from "@storybook/jest";
-import { userEvent, within } from "@storybook/testing-library";
+import { within } from "@storybook/testing-library";
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 

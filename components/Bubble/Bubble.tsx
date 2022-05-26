@@ -26,10 +26,12 @@ const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
   backgroundColor: "$backgroundContainer",
-  borderRadius: "$small",
+  borderRadius: "$mid",
   boxShadow: "$mid",
   overflow: "hidden",
   padding: "$32",
+  width: "100%",
+  maxWidth: "calc((6/12) * 100vw)",
 });
 
 const TextContainer = styled("div", {
