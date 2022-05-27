@@ -1,4 +1,5 @@
 import { createStitches } from "@stitches/react";
+import { makeScales } from "./typePairs";
 const stitches = createStitches({
   theme: {
     colors: {
@@ -103,3 +104,9 @@ const stitches = createStitches({
 
 const { styled, globalCss, getCssText, theme, css } = stitches;
 export { styled, getCssText, globalCss, theme, css };
+
+
+
+ 
+
+console.log(makeScales())
