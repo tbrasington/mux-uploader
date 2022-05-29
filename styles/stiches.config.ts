@@ -1,5 +1,18 @@
 import { createStitches } from "@stitches/react";
 import { makeScales } from "./typePairs";
+
+
+ 
+interface cssProps { 
+  [key: string]: string 
+}
+const scaleSteps = makeScales();
+const typeSteps : cssProps = {} 
+
+for (const step of Object.keys(scaleSteps.typeScale)) {
+  typeSteps[`step-${step}`] = scaleSteps.typeScale[parseInt(step)].clamp
+}
+
 const stitches = createStitches({
   theme: {
     colors: {
@@ -41,16 +54,7 @@ const stitches = createStitches({
       112: "7rem",
       "pageMarginX": 'calc((1/12) * 100vw)'
     },
-    fontSizes: {
-      "step--2": "clamp(0.69rem, calc(0.64rem + 0.25vw), 0.87rem)",
-      "step--1": "clamp(0.83rem, calc(0.77rem + 0.30vw), 1.04rem)",
-      "step-0": "clamp(1.00rem, calc(0.93rem + 0.36vw), 1.25rem)",
-      "step-1": "clamp(1.20rem, calc(1.11rem + 0.43vw), 1.50rem)",
-      "step-2": "clamp(1.44rem, calc(1.34rem + 0.51vw), 1.80rem)",
-      "step-3": "clamp(1.73rem, calc(1.60rem + 0.62vw), 2.16rem)",
-      "step-4": "clamp(2.07rem, calc(1.93rem + 0.74vw), 2.59rem)",
-      "step-5": "clamp(2.49rem, calc(2.31rem + 0.89vw), 3.11rem)",
-    },
+    fontSizes:typeSteps,
     fonts: {
       inter: "Inter var, apple-system, sans-serif",
       mono: "Söhne Mono, menlo, monospace",
@@ -106,7 +110,3 @@ const { styled, globalCss, getCssText, theme, css } = stitches;
 export { styled, getCssText, globalCss, theme, css };
 
 
-
- 
-
-console.log(makeScales())

@@ -1,8 +1,3 @@
-interface StepProps {
-   [key: string]: number;
-}
-
-
 
 interface ScaleProps {
    [key: string]: number;
@@ -46,18 +41,16 @@ function clampBuilder(minWidthPx: number, maxWidthPx: number, minSizePx: number,
   return `clamp(${min}, ${val}, ${max})`;
 }
 
-function generateCSS(system: { typeScale: any; }) {
-  let css = "";
+// function generateCSS(system: { typeScale: any; }) {
+//   let css = "";
 
-  const { typeScale } = system;
+//   const { typeScale } = system;
 
-  for (const step of Object.keys(typeScale)) {
-    css += `--step-${step}: ${typeScale[step].clamp};`;
-  }
-
-
-  return css;
-}
+//   for (const step of Object.keys(typeScale)) {
+//     css += `--step-${step}: ${typeScale[step].clamp};`;
+//   }
+//   return css;
+// }
 
 interface viewPortProps {
     width: number,
@@ -100,7 +93,6 @@ function buildFluidDesignSystem(opts: {
       minViewport.fontSize * Math.pow(minViewport.typeScale, i)
     );
 
-    console.log({valueMin: scaleSteps, vw: minViewport.typeScale})
     const valueMax = round(
       maxViewport.fontSize * Math.pow(maxViewport.typeScale, i)
     );
@@ -117,13 +109,8 @@ function buildFluidDesignSystem(opts: {
     };
   }
  
-  
-
   return {
-    system  : system,
-    generateCSS() {
-      return generateCSS(system);
-    },
+    system  : system
   };
 }
 
@@ -135,12 +122,12 @@ export function makeScales() {
     minViewport: {
       width: 320,
       fontSize: 16,
-      typeScale: scaleSteps["minor-third"],
+      typeScale: scaleSteps["augmented-fourth"],
     },
     maxViewport: {
       width: 1440,
       fontSize: 20,
-      typeScale: scaleSteps["minor-third"],
+      typeScale: scaleSteps["augmented-fourth"],
     },
   };
 

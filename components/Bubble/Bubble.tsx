@@ -31,7 +31,7 @@ const Container = styled("div", {
   overflow: "hidden",
   padding: "$32",
   width: "100%",
-  maxWidth: "calc((6/12) * 100vw)",
+  maxWidth: "72ch",
 });
 
 const TextContainer = styled("div", {
