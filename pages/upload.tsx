@@ -106,13 +106,19 @@ export function Upload() {
             >
               Select video file
             </Button>
-            <input type="file" onChange={startUpload} ref={inputRef} />
+            <HiddenFileInput
+              type="file"
+              onChange={startUpload}
+              ref={inputRef}
+            />
           </label>
         )}
       </Bubble>
     </Container>
   );
 }
+
+const HiddenFileInput = styled("input", { display: "none" });
 
 Upload.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
